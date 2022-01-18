@@ -8,13 +8,13 @@
     when: os_type == "windows"
     block:
       - name: win shell to ping self
-        win_shell: ping 127.0.0.1
+        ansible.windows.win_shell: ping 127.0.0.1
         register: ping_res
 
       - name: print ping results
-        debug:
+        ansible.builtin.debug:
           var: ping_res.stdout_lines
 
       - name: import task 1
-        debug:
+        ansible.builtin.debug:
           msg: windows block 1 for hardening
