@@ -5,5 +5,5 @@
   vars:
   tasks:
   - name: run the scanner
-    debug:
+    ansible.builtin.debug:
       msg: Scan machine and generate reports
